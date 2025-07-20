@@ -1,0 +1,107 @@
+/* AboutUs.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Light blue, water-themed */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .aboutus-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .aboutus-banner {
+    background-color: #00796b; /* Teal */
+    color: white;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Subtle texture */
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    animation: waterWave 6s infinite linear;
+  }
+  
+  .aboutus-title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .aboutus-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .aboutus-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .aboutus-heading {
+    color: #00796b;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .aboutus-text {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .aboutus-content:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Water wave animation */
+  @keyframes waterWave {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+  
+  /* Floating effect for text */
+  .aboutus-title, .aboutus-subtitle {
+    animation: floatText 3s ease-in-out infinite;
+  }
+  
+  @keyframes floatText {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .aboutus-banner {
+      padding: 30px 10px;
+    }
+  
+    .aboutus-title {
+      font-size: 2.5rem;
+    }
+  
+    .aboutus-content {
+      padding: 20px;
+    }
+  }
+  

@@ -1,0 +1,153 @@
+/* ContactUs.css */
+
+.contactus-container {
+    font-family: 'Arial', sans-serif;
+    color: #003366; /* Dark blue */
+    padding-bottom: 40px;
+  }
+  
+  .contactus-banner {
+    background-color: #004080; /* Deep ocean blue */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    animation: slideInFromLeft 1s ease-in-out; /* New animation for banner */
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .contactus-title {
+    font-size: 3rem;
+    margin: 0;
+    animation: fadeInTitle 1.2s ease-in-out;
+  }
+  
+  @keyframes fadeInTitle {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .contactus-subtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeInSubtitle 1.6s ease-in-out;
+  }
+  
+  @keyframes fadeInSubtitle {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contactus-content {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f4f4f9; /* Soft grayish-blue background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contactus-heading {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeInContent 1s ease-in-out;
+  }
+  
+  .contactus-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contactus-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Add a fade-in effect for inputs */
+  .fade-in-input,
+  .fade-in-textarea,
+  .fade-in-btn {
+    opacity: 0;
+    animation: fadeInInput 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInInput {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .contactus-form input, .contactus-form textarea {
+    padding: 10px;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .contactus-form input:focus, .contactus-form textarea:focus {
+    outline: none;
+    border-color: #004080; /* Change to deeper blue on focus */
+  }
+  
+  .contactus-btn {
+    padding: 12px 20px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contactus-btn:hover {
+    background-color: #001f4d; /* Darker blue on hover */
+  }
+  
+  /* Fade in for the submit button */
+  .fade-in-btn {
+    opacity: 0;
+    animation: fadeInInput 2s ease-in-out forwards;
+  }
+  

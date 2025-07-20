@@ -1,0 +1,172 @@
+/* General Page Styles */
+.product-page-container {
+    font-family: 'Arial', sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/watercolor.png'), linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 204, 255, 0.5)); /* Water-themed background */
+    background-size: cover; /* Cover the entire background */
+    color: #003366; /* Dark blue text for visibility */
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh; /* Ensure full height */
+    position: relative; /* For positioning the overlay */
+    overflow: hidden; /* Clip content */
+  }
+  
+  /* Add a wave or bubble effect in the background */
+  .product-page-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.transparenttextures.com/patterns/bubble.png'); /* Bubble pattern */
+    opacity: 0.2; /* Set transparency */
+    pointer-events: none; /* Prevent mouse events */
+  }
+  
+  /* Title Styling */
+  .page-title {
+    font-size: 3rem; /* Large title */
+    color: #004080; /* Deep blue for title */
+    margin-bottom: 40px;
+    animation: fadeInTitle 1.5s ease-in-out; /* Fade-in animation */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  @keyframes fadeInTitle {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Title Hover Animation */
+  .page-title:hover {
+    transform: scale(1.1); /* Slightly enlarge title on hover */
+    color: #0077cc; /* Change color on hover */
+  }
+  
+  /* Product Grid Layout */
+  .product-grid {
+    display: grid; /* Use grid layout for products */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between cards */
+    max-width: 1200px; /* Maximum width for grid */
+    margin: 0 auto; /* Center the grid */
+  }
+  
+  /* Product Card */
+  .product-card {
+    background-color: white; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    animation: fadeInCard 1s ease forwards; /* Fade-in animation */
+    position: relative; /* For hover effects */
+    overflow: hidden; /* Clip content */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Hover Animation for Card */
+  .product-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+  }
+  
+  /* Image Styling */
+  .product-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Zoom and filter effect */
+  }
+  
+  .product-card:hover .product-image {
+    transform: scale(1.05); /* Slight zoom on hover */
+    filter: brightness(1.1); /* Brighten image on hover */
+  }
+  
+  /* Product Info */
+  .product-name {
+    font-size: 1.2rem; /* Medium size for product name */
+    color: #004080; /* Dark blue color */
+    margin: 10px 0; /* Space around name */
+    animation: slideInLeft 0.5s ease forwards; /* Slide-in animation */
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .product-price {
+    font-size: 1.1rem; /* Medium size for price */
+    color: #0066cc; /* Lighter blue for price */
+    margin-bottom: 20px; /* Space below price */
+    animation: slideInRight 0.5s ease forwards; /* Slide-in animation */
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Buy Now Button */
+  .buy-now-btn {
+    background-color: #003366; /* Dark button color */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Medium font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+    
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #001f4d; /* Darker on hover */
+    animation: pulse 0.5s ease; /* Pulse animation */
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

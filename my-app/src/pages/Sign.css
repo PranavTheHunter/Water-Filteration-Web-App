@@ -1,0 +1,148 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #e0f7fa, #f1f8e9, #f9fbe7);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes unfold {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.signup-container {
+  width: 100%;
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  transform: scale(0);
+  animation: unfold 1s ease-out forwards;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header:hover{
+  border-radius: 20px;
+  background-color: rgba(3, 11, 247, 0.562);
+  transition: border-radius 0.5s ease, background-color 1s ease-in-out;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000; /* Changed to black for better visibility */
+  transition: color 0.3s ease, font-size 0.3s ease; /* Added transition */
+}
+
+.header-title:hover {
+  color: #ffffff; /* Changed hover color */
+  font-size: 2.7rem; /* Slightly increase font size on hover */
+  
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-form label {
+  margin: 20px 0 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #000; /* Changed to black for better visibility */
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #0527e6f4;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  background-color: rgba(255, 255, 255, 0.299);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background color transition */
+  width: 100%; /* Set width to 100% for consistency */
+}
+
+.input-field:hover {
+  border-color: #007bff;
+  background-color: rgba(255, 255, 255, 0.91); /* Light background on hover */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  transition: background-color 0.5s ease;
+}
+
+.submit-button {
+  padding: 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.signup-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('C:/Users/sahil/Downloads/water-texture-2714636_1280 (1).jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  transition: opacity 0.6s ease-in-out;
+  z-index: -1;
+}
+
+.signup-container:hover::before {
+  opacity: 0.7;
+}
